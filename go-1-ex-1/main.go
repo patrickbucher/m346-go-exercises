@@ -4,6 +4,8 @@ import "fmt"
 
 func main() {
 	// TODO: Declare and initialize the variables being used in the output!
+
+	fmt.Printf("Hello World by Siri")
 	fmt.Printf("Vor- und Nachname: %s %s\n", firstName, lastName)
 	fmt.Printf("Geburtsdatum: %d.%d.%d\n", dayOfBirth, monthOfBirth, yearOfBirth)
 	fmt.Printf("Anzahl Geschwister: %d\n", numberOfSiblings)
