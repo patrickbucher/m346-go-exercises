@@ -14,9 +14,11 @@ func main() {
 
 	const marathonInKM = 42.195
 	var marathonInMiles = 0.0 // TODO: calculate using mileInKM!
+	var factor = 0.62137119
+	marathonInMiles = marathonInKM * factor
 	fmt.Printf("a marathon is %.2f kilometres = %.2f miles long\n", marathonInKM, marathonInMiles)
 
 	var boilingWaterCelsius = 100.0
-	var boilingWaterFahrenheit = 0.0 // TODO: calculate using formula above!
+	var boilingWaterFahrenheit = boilingWaterCelsius*1.8 + 32 // TODO: calculate using formula above!
 	fmt.Printf("water boils at %.2f°C = %.2f°F\n", boilingWaterCelsius, boilingWaterFahrenheit)
 }
