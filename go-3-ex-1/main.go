@@ -77,4 +77,14 @@ func main() {
 	outputWithZodiacSign(rick)
 	outputWithZodiacSign(edsger)
 	outputWithZodiacSign(alan)
+
+	// zusatz
+
+	aaron := Person{FullName{"Aaron", "Ettlin"}, BirthDate{18, 04, 2007}} // widder / aries ♈
+	phil := Person{FullName{"Phil", "Hägeli"}, BirthDate{10, 3, 2008}}    // fisch / pisce ♓
+	eneas := Person{FullName{"Eneas", "Infanger"}, BirthDate{1, 3, 2008}} // fisch / pisce ♓
+
+	outputWithZodiacSign(aaron)
+	outputWithZodiacSign(phil)
+	outputWithZodiacSign(eneas)
 }
