@@ -28,7 +28,6 @@ func main() {
 		for _, suit := range suits {
 			fmt.Printf("%c%c ", suit, rank)
 		}
-
 		fmt.Println()
 	}
 
