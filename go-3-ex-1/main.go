@@ -128,4 +128,11 @@ func main() {
 	outputWithZodiacSign(rick)
 	outputWithZodiacSign(edsger)
 	outputWithZodiacSign(alan)
+
+	//Zusatzaufgabe
+	siri := Person{FullName{"Sirion", "Taiyasakda"}, BirthDate{1, 2, 1992}}
+	tinu := Person{FullName{"Martin", "Hodler"}, BirthDate{20, 3, 1994}}
+	outputWithZodiacSign(siri)
+	outputWithZodiacSign(tinu)
+
 }
