@@ -24,7 +24,12 @@ func main() {
 	ranks := []rune{Six, Seven, Eight, Nine, Ten, Jack, Queen, King, Ace}
 
 	// TODO: Loop over suits and ranks to output all combinations.
+	for i := 0; i < len(suits); i++ {
+		for j := 0; j < len(ranks); j++ {
+			fmt.Printf("%c %c\n", suits[i], ranks[j])
+		}
+	}
 
 	// TODO: delete this line afterwards
-	fmt.Println(suits, ranks)
+	// fmt.Println(suits, ranks)
 }
