@@ -15,20 +15,13 @@ const (
 	Capricornus = '\u2651' // Steinbock
 	Aquarius    = '\u2652' // Wassermann
 	Pisces      = '\u2653' // Fische
+
+	// Zusatzaufgabe
+	Default = '\u2368' // ⍨
 )
 
 func outputDateRange(zodiacSign rune) {
 	fmt.Printf("%c: ", zodiacSign)
-	// TODO: Replace if, else if branching with switch/case.
-	// TODO: Define all 12 cases...
-	/* if zodiacSign == Aries {
-		fmt.Println("21.03. - 20.04")
-	} else if zodiacSign == Taurus {
-		fmt.Println("21.04. - 21.05")
-	} else {
-		fmt.Println("")
-	}
-	*/
 
 	switch zodiacSign {
 	case Aries:
@@ -65,4 +58,7 @@ func main() {
 	for zodiacSign := Aries; zodiacSign <= Pisces; zodiacSign++ {
 		outputDateRange(zodiacSign)
 	}
+
+	// Zusatzaufgabe
+	outputDateRange(Default)
 }
