@@ -1,31 +1,22 @@
 # Aufgaben
 
-Die folgenden Aufgaben können Sie direkt in die angegebene Datei lösen. Beachten
-Sie hierzu die `// TODO: `-Kommentare im Code und die folgenden Instruktionen:
+Die folgende Aufgaben kannst du direkt in die angegebene Datei lösen. Beachte hierzu die `// TODO: `-Kommentare im Code und die folgenden Instruktionen:
 
 ## Note berechnen
 
-`go-4-ex-1/main.go`: Eine Note `N` von 1 (schlechteste) bis 6 (beste) kann
-linear anhand der erreichten Punktzahl `E` und maximalen Punktezahl `M`
-berechnet werden:
+`go-4-ex-1/main.go`: Eine Note `N` von 1 (schlechteste) bis 6 (beste) kann linear anhand der erreichten Punktzahl `E` und maximalen Punktezahl `M` berechnet werden:
 
 ![Berechnung der Note](formulas/grade.png)
 
-Schreiben Sie eine Funktion namens `computeGrade`, welche die beiden Parameter
-`gotPoints` (erreichte Punktzahl) und `maxPoints` (maximale Punktzahl) erwartet
-und eine Note im Bereich `[1.0;6.0]` zurückgibt.
+Schreibe eine Funktion namens `computeGrade`, welche die beiden Parameter `gotPoints` (erreichte Punktzahl) und `maxPoints` (maximale Punktzahl) erwartet und eine Note im Bereich `[1.0;6.0]` zurückgibt.
 
-Rufen Sie die Funktion dreimal mit verschiedenen Werten auf und schreiben Sie
-das Ergebnis als Kommentar hinter den jeweiligen Funktionsaufruf, z.B.:
+Rufen die Funktion dreimal mit verschiedenen Werten auf und schreibe das Ergebnis als Kommentar hinter den jeweiligen Funktionsaufruf, z.B.:
 
     computeGrade(17.5, 28.0) // 4.125
 
 ### Zusatzaufgabe
 
-Erweitern Sie die Funktion `computeGrade`, sodass sie auf sinnlose Argumente
-reagiert (z.B.  negative Punktzahlen, mehr Punkte erreicht als möglich) und
-einen entsprechenden `error` zurückgibt. Passen Sie Ihre Funktionsaufrufe
-entsprechend an, um auf Fehler reagieren zu können.
+Erweitere die Funktion `computeGrade`, sodass sie auf sinnlose Argumente reagiert (z.B.  negative Punktzahlen, mehr Punkte erreicht als möglich) und einen entsprechenden `error` zurückgibt. Passe deine Funktionsaufrufe entsprechend an, um auf Fehler reagieren zu können.
 
 ## Hypotenuse berechnen
 
@@ -33,25 +24,19 @@ entsprechend an, um auf Fehler reagieren zu können.
 
 ![Satz vom Pythagoras](formulas/pythagoras.png)
 
-Stellt man die Formel auf `c` um, kann man mit der Formel die Länge der
-Hypotenuse bei gegebenen Kathetenlängen berechnen:
+Stellt man die Formel auf `c` um, kann man mit der Formel die Länge der Hypotenuse bei gegebenen Kathetenlängen berechnen:
 
 ![Berechnung der Hypotenuse](formulas/hypotenuse.png)
 
-Schreiben Sie eine Funktion namens `computeHypotenuse`, welche die beiden
-Kathetenlängen `a` und `b` als Parameter erwartet und die Länge der Hypotenuse
-zurückgibt.
+Schreibe eine Funktion namens `computeHypotenuse`, welche die beiden Kathetenlängen `a` und `b` als Parameter erwartet und die Länge der Hypotenuse zurückgibt.
 
-Tipp: Verwenden Sie die Funktion [`math.Pow`](https://pkg.go.dev/math#Pow) und
-[`math.Sqrt`](https://pkg.go.dev/math#Sqrt) für die Berechnung.
+Tipp: Verwende die Funktion [`math.Pow`](https://pkg.go.dev/math#Pow) und [`math.Sqrt`](https://pkg.go.dev/math#Sqrt) für die Berechnung.
 
-Testen Sie die Funktion mit verschiedenen Kathetenlängen und dokumentieren Sie
-die Aufrufe wie bei Aufgabe 1 mit Kommentaren.
+Teste die Funktion mit verschiedenen Kathetenlängen und dokumentiere die Aufrufe wie bei Aufgabe 1 mit Kommentaren.
 
 ### Zusatzaufgabe
 
-Die beiden Kathetenlängen `a` und `b` können zu einem neuen Typ namens
-`ShortSides` gruppiert werden:
+Die beiden Kathetenlängen `a` und `b` können zu einem neuen Typ namens `ShortSides` gruppiert werden:
 
 ```go
 type ShortSides struct {
@@ -60,16 +45,13 @@ type ShortSides struct {
 }
 ```
 
-Schreiben Sie eine _Methode_ `Hypotenuse`, welche auf `ShortSides` operiert und
-keine weiteren Parameter erwartet.
+Schreiben eine _Methode_ `Hypotenuse`, welche auf `ShortSides` operiert und keine weiteren Parameter erwartet.
 
-Testen Sie die Methode mit den gleichen Kathetenpaaren wie `computeHypotenuse`
-und notieren Sie sich die Ergebnisse als Kommentare hinter den Methodenaufrufen.
+Testen die Methode mit den gleichen Kathetenpaaren wie `computeHypotenuse` und notiere dir die Ergebnisse als Kommentare hinter den Methodenaufrufen.
 
 ## Quadratische Gleichungen lösen
 
-`go-4-ex-3/main.go`: Quadratische Gleichungen der Form `ax² + bx + c = 0` lassen sich
-mithilfe der sogenannten _Mitternachtsformel_ lösen:
+`go-4-ex-3/main.go`: Quadratische Gleichungen der Form `ax² + bx + c = 0` lassen sich mithilfe der sogenannten _Mitternachtsformel_ lösen:
 
 ![Lösung(en) von quadratischen Gleichungen berechnen](formulas/quadratic-formula.png)
 
@@ -83,16 +65,11 @@ Je nach Wert der Diskriminante `D` gibt es eine unterschiedliche Anzahl an Lösu
 - `D = 0`: eine Lösung
 - `D < 0`: keine Lösung
 
-Schreiben Sie eine Funktion namens `computeQuadraticFormula`, welche die
-Parameter `a`, `b` und `c` erwartet, und ein Slice mit den berechneten Lösungen
-zurückgibt.
+Schreibe eine Funktion namens `computeQuadraticFormula`, welche die Parameter `a`, `b` und `c` erwartet, und ein Slice mit den berechneten Lösungen zurückgibt.
 
-Tipp: Verwenden Sie die Funktion [`math.Pow`](https://pkg.go.dev/math#Pow) und
-[`math.Sqrt`](https://pkg.go.dev/math#Sqrt) für die Berechnung.
+Tipp: Verwende die Funktion [`math.Pow`](https://pkg.go.dev/math#Pow) und [`math.Sqrt`](https://pkg.go.dev/math#Sqrt) für die Berechnung.
 
-Rufen Sie die Funktion dreimal auf, sodass je ein Ergebnis mit zwei Lösungen,
-mit einer Lösung und ohne Lösung entsteht. Dokumentieren Sie die Ergebnisse
-wiederum als Kommentare. Sie können hierzu die folgenden Testdaten verwenden:
+Rufe die Funktion dreimal auf, sodass je ein Ergebnis mit zwei Lösungen, mit einer Lösung und ohne Lösung entsteht. Dokumentiere die Ergebnisse wiederum als Kommentare. Du kannst hierzu die folgenden Testdaten verwenden:
 
 | D | a | b | c |
 |--:|--:|--:|--:|
@@ -102,32 +79,23 @@ wiederum als Kommentare. Sie können hierzu die folgenden Testdaten verwenden:
 
 ### Zusatzaufgabe
 
-Lagern Sie die Berechnung der Diskriminanten in eine eigene Funktion
-namens `computeDiscriminant` aus. Testen Sie die Funktion separat mit den
-Testdaten von vorher und dokumentieren Sie die Ergebnisse als Kommentar.
+Lagere die Berechnung der Diskriminanten in eine eigene Funktion namens `computeDiscriminant` aus. Teste die Funktion separat mit den Testdaten von vorher und dokumentiere die Ergebnisse als Kommentar.
 
-Schreiben Sie anschliessend die Funktion `computeQuadraticFormula` so um, dass
-sie zur Berechnung die Funktion `computeDiscriminant` verwendet:
+Schreibe anschliessend die Funktion `computeQuadraticFormula` so um, dass sie zur Berechnung die Funktion `computeDiscriminant` verwendet:
 
 ![Lösung(en) von quadratischen Gleichungen mithilfe der Diskriminanten berechnen](formulas/quadratic-formula-discriminant.png)
 
 ## Temperaturumrechnungen durchführen
 
-`go-4-ex-4/main.go`: Schreiben Sie zwei Funktionen `convertCelsiusToFahrenheit`
-und `convertFahrenheitToCelsius`, welche Temperaturangaben von Celsius (`C`)
-nach Fahrenheit (`F`) bzw. von Fahrenheit nach Celsius umrechnen. Verwenden Sie
-hierzu folgende Formeln:
+`go-4-ex-4/main.go`: Schreiben zwei Funktionen `convertCelsiusToFahrenheit` und `convertFahrenheitToCelsius`, welche Temperaturangaben von Celsius (`C`) nach Fahrenheit (`F`) bzw. von Fahrenheit nach Celsius umrechnen. Verwende hierzu folgende Formeln:
 
 ![Fahrenheit in Celsius umrechnen](formulas/fahrenheit-to-celsius.png)
 
 ![Celsius in Fahrenheit umrechnen](formulas/celsius-to-fahrenheit.png)
 
-Rufen Sie `convertCelsiusToFahrenheit` mit drei verschiedenen Werten auf und
-dokumentieren Sie die Ergebnisse als Kommentar.
+Rufe `convertCelsiusToFahrenheit` mit drei verschiedenen Werten auf und dokumentiere die Ergebnisse als Kommentar.
 
-Rufen Sie anschliessend `convertFahrenheitToCelsius` mit den Ergebnissen von
-vorher auf, sodass Sie wieder die ursprüngliche Angabe in Celsius erhalten
-sollten.
+Rufe anschliessend `convertFahrenheitToCelsius` mit den Ergebnissen von vorher auf, sodass du wieder die ursprüngliche Angabe in Celsius erhalten solltest.
 
 ### Zusatzaufgabe
 
@@ -138,8 +106,7 @@ type Celsius float64
 type Fahrenheit float64
 ```
 
-Schreiben Sie zwei Methoden `ConvertToFahrenheit` und `ConvertToCelsius` für
-`Celsius` bzw. `Fahrenheit`, sodass folgende Aufrufe möglich werden:
+Schreibe zwei Methoden `ConvertToFahrenheit` und `ConvertToCelsius` für `Celsius` bzw. `Fahrenheit`, sodass folgende Aufrufe möglich werden:
 
 ```go
 var cozy Celsius = 23.0
@@ -149,10 +116,9 @@ var cold Fahrenheit = 15.3
 cold.ConvertToCelsius()
 ```
 
-Testen Sie die Methoden mit den Daten von vorher und dokumentieren Sie die
-Ergebnisse als Kommentare.
+Teste die Methoden mit den Daten von vorher und dokumentiere die Ergebnisse als Kommentare.
 
-Zusatzfrage: Welche Notation finden Sie übersichtlicher?
+Zusatzfrage: Welche Notation findest du übersichtlicher?
 
 ```go
 fmt.Println(convertFahrenheitToCelsius(convertCelsiusToFahrenheit(23.0)))
@@ -164,4 +130,3 @@ Oder:
 var c Celsius = 23
 fmt.Println(c.ConvertToFahrenheit().ConvertToCelsius())
 ```
-

@@ -1,3 +1,3 @@
 module github.com/patrickbucher/m346-go-exercises
 
-go 1.23.2
+go 1.25.3
