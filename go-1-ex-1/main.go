@@ -2,6 +2,15 @@ package main
 
 import "fmt"
 
+var firstName string = "Ramon"
+var lastName string = "Zielke"
+var dayOfBirth int = 30
+var monthOfBirth int = 1
+var yearOfBirth int = 2000
+var numberOfSiblings int = 3
+var heightInMeters float64 = 1.85
+var zodiacSign byte = 'W'
+
 func main() {
 	// TODO: Declare and initialize the variables being used in the output!
 	fmt.Printf("Vor- und Nachname: %s %s\n", firstName, lastName)
