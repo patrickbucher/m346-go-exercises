@@ -3,19 +3,32 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"os"
 	"time"
 )
 
 func main() {
+	rand.Seed(time.Now().UnixNano()) 
 	var eyes = rand.Intn(5) + 1
 	var when = time.Now()
 
-	// TODO: use fmt.Fprintln instead!
-	fmt.Println("the dice shows", eyes, "eyes")
+	fmt.Fprintln(os.Stdout, "the dice shows", eyes, "eyes")
+	fmt.Fprintln(os.Stdout, "the dice was rolled at", when)
 
-	// TODO: use fmt.Fprintln instead!
-	fmt.Println("the dice was rolled at", when)
+	eyesFile, err := os.Create("eyes.txt")
+	if err != nil {
+		fmt.Println("Error creating eyes.txt:", err)
+		return
+	}
+	defer eyesFile.Close()
+	fmt.Fprintln(eyesFile, eyes)
 
-	// TODO: how to write the output into eyes.txt and dice.log?
-	// go run ex3/main.go TODO
+	logFile, err := os.Create("dice.log")
+	if err != nil {
+		fmt.Println("Error creating dice.log:", err)
+		return
+	}
+	defer logFile.Close()
+	fmt.Fprintln(logFile, "Dice rolled at", when, ":", eyes, "eyes")
 }
+

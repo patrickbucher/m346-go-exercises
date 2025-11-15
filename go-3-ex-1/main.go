@@ -17,20 +17,11 @@ const (
 	Pisces      = '\u2653' // Fische
 )
 
-func outputWithZodiacSign(p Person) {
-	var zodiacSign rune = '?'
-
-	// TODO: Assign proper value to zodiacSign using if/else branching.
-	// NOTE: The runes are defined above as constants.
-
-	fmt.Printf("%s %s, born on %02d.%02d.%04d, has the zodiac sign %c.\n",
-		p.FirstName, p.LastName, p.Day, p.Month, p.Year, zodiacSign)
-}
-
 type FullName struct {
 	FirstName string
 	LastName  string
 }
+
 type BirthDate struct {
 	Day   byte
 	Month byte
@@ -42,16 +33,89 @@ type Person struct {
 	BirthDate
 }
 
+func outputWithZodiacSign(p Person) {
+	var zodiacSign rune = '?'
+
+	switch p.Month {
+	case 1:
+		if p.Day <= 20 {
+			zodiacSign = Capricornus
+		} else {
+			zodiacSign = Aquarius
+		}
+	case 2:
+		if p.Day <= 19 {
+			zodiacSign = Aquarius
+		} else {
+			zodiacSign = Pisces
+		}
+	case 3:
+		if p.Day <= 20 {
+			zodiacSign = Pisces
+		} else {
+			zodiacSign = Aries
+		}
+	case 4:
+		if p.Day <= 20 {
+			zodiacSign = Aries
+		} else {
+			zodiacSign = Taurus
+		}
+	case 5:
+		if p.Day <= 21 {
+			zodiacSign = Taurus
+		} else {
+			zodiacSign = Gemini
+		}
+	case 6:
+		if p.Day <= 21 {
+			zodiacSign = Gemini
+		} else {
+			zodiacSign = Cancer
+		}
+	case 7:
+		if p.Day <= 22 {
+			zodiacSign = Cancer
+		} else {
+			zodiacSign = Leo
+		}
+	case 8:
+		if p.Day <= 23 {
+			zodiacSign = Leo
+		} else {
+			zodiacSign = Virgo
+		}
+	case 9:
+		if p.Day <= 23 {
+			zodiacSign = Virgo
+		} else {
+			zodiacSign = Libra
+		}
+	case 10:
+		if p.Day <= 23 {
+			zodiacSign = Libra
+		} else {
+			zodiacSign = Scorpius
+		}
+	case 11:
+		if p.Day <= 22 {
+			zodiacSign = Scorpius
+		} else {
+			zodiacSign = Sagittarius
+		}
+	case 12:
+		if p.Day <= 21 {
+			zodiacSign = Sagittarius
+		} else {
+			zodiacSign = Capricornus
+		}
+	}
+
+	fmt.Printf("%s %s, born on %02d.%02d.%04d, has the zodiac sign %c.\n",
+		p.FirstName, p.LastName, p.Day, p.Month, p.Year, zodiacSign)
+}
+
 func main() {
 	grace := Person{FullName{"Grace", "Hopper"}, BirthDate{9, 12, 1906}}
-	dennis := Person{FullName{"Dennis", "Ritchie"}, BirthDate{9, 9, 1941}}
-	rick := Person{FullName{"Rick", "Astley"}, BirthDate{6, 2, 1966}}
-	edsger := Person{FullName{"Edsger", "Dijkstra"}, BirthDate{11, 5, 1930}}
-	alan := Person{FullName{"Alan", "Turing"}, BirthDate{23, 6, 1912}}
-
 	outputWithZodiacSign(grace)
-	outputWithZodiacSign(dennis)
-	outputWithZodiacSign(rick)
-	outputWithZodiacSign(edsger)
-	outputWithZodiacSign(alan)
 }
