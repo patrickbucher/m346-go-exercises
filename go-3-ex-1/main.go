@@ -36,6 +36,7 @@ type Person struct {
 func outputWithZodiacSign(p Person) {
 	var zodiacSign rune = '?'
 
+	// Assign zodiacSign based on month and day
 	switch p.Month {
 	case 1:
 		if p.Day <= 20 {

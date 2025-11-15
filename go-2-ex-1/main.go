@@ -34,8 +34,12 @@ func main() {
 		NumberOfSiblings: 0,
 		ZodiacSign:       "Scorpio",
 	}
+
 	fmt.Println(me)
+
 	fmt.Println("Siblings Before:", me.NumberOfSiblings)
+
 	me.NumberOfSiblings += 1
+
 	fmt.Println("Siblings After:", me.NumberOfSiblings)
 }

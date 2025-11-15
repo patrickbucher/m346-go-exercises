@@ -11,10 +11,8 @@ func main() {
 	rand.Seed(time.Now().UnixNano()) 
 	var eyes = rand.Intn(5) + 1
 	var when = time.Now()
-
 	fmt.Fprintln(os.Stdout, "the dice shows", eyes, "eyes")
 	fmt.Fprintln(os.Stdout, "the dice was rolled at", when)
-
 	eyesFile, err := os.Create("eyes.txt")
 	if err != nil {
 		fmt.Println("Error creating eyes.txt:", err)
@@ -31,4 +29,3 @@ func main() {
 	defer logFile.Close()
 	fmt.Fprintln(logFile, "Dice rolled at", when, ":", eyes, "eyes")
 }
-

@@ -3,18 +3,18 @@ package main
 import "fmt"
 
 const (
-	Aries       = '\u2648' // Widder
-	Taurus      = '\u2649' // Stier
-	Gemini      = '\u264a' // Zwillinge
-	Cancer      = '\u264b' // Krebs
-	Leo         = '\u264c' // Löwe
-	Virgo       = '\u264d' // Jungfrau
-	Libra       = '\u264e' // Waage
-	Scorpius    = '\u264f' // Skorpion
-	Sagittarius = '\u2650' // Schütze
-	Capricornus = '\u2651' // Steinbock
-	Aquarius    = '\u2652' // Wassermann
-	Pisces      = '\u2653' // Fische
+	Aries       = '\u2648'
+	Taurus      = '\u2649'
+	Gemini      = '\u264a'
+	Cancer      = '\u264b'
+	Leo         = '\u264c'
+	Virgo       = '\u264d'
+	Libra       = '\u264e'
+	Scorpius    = '\u264f'
+	Sagittarius = '\u2650'
+	Capricornus = '\u2651'
+	Aquarius    = '\u2652'
+	Pisces      = '\u2653'
 )
 
 func outputDateRange(zodiacSign rune) {
@@ -50,8 +50,8 @@ func outputDateRange(zodiacSign rune) {
 }
 
 func main() {
-	zodiacSigns := []rune{Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpius, Sagittarius, Capricornus, Aquarius, Pisces}
-	for _, sign := range zodiacSigns {
-		outputDateRange(sign)
+	zodiacs := []rune{Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpius, Sagittarius, Capricornus, Aquarius, Pisces}
+	for _, z := range zodiacs {
+		outputDateRange(z)
 	}
 }
