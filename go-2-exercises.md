@@ -19,7 +19,7 @@ Passen anschliessend die Anzahl deiner Geschwister an, indem du diese um eins er
 In der gegebenen Datei wird ein Slice von fünf Elementen definiert. Die ersten beiden Werte lauten `1`. Erweitere das Fibonacci-Slice `fibs` folgendermassen:
 
 1. Indem du die verbleibenden drei Werte berechnest und direkt ins bestehende Slice schreibst.
-2. Indem du noch vier weitere Werte berechnest und diese dem Slice anhängst.
+2. Indem du noch drei weitere Werte berechnest und diese dem Slice anhängst.
 
 ## Modulbezeichnungen
 
