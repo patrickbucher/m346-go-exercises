@@ -32,7 +32,7 @@ func main() {
 			Month: 1,
 			Year:  2009,
 		},
-		NumberOfSiblings: 4,
+		NumberOfSiblings: 3,
 		ZodiacSign:       '\u2652',
 	}
 	fmt.Println(me)

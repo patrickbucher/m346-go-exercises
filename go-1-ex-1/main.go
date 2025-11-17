@@ -8,7 +8,7 @@ var dayOfBirth int = 30
 var monthOfBirth int = 1
 var yearOfBirth int = 2000
 var numberOfSiblings int = 3
-var heightInMeters float64 = 1.85
+var heightInMeters float64 = 1.73
 var zodiacSign rune = '\u2652'
 
 func main() {
