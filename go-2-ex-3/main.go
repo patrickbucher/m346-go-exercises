@@ -8,7 +8,7 @@ func main() {
 	modules := make(map[int]string)
 
 	modules[104] = "Datenmodell implementieren"
-	modules[117] = "ICT-Lösungen mit Blockchain Technologie umsetzen"
+	modules[117] = "Informatik- und Netzinfrastruktur für ein kleines Unternehmen realisieren"
 	modules[346] = "Cloud Lösungen konzipieren und realisieren"
 
 	fmt.Println("Modul 104:", modules[104])
