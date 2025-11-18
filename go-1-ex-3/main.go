@@ -9,25 +9,19 @@ import (
 
 func main() {
 	rand.Seed(time.Now().UnixNano())
-	var eyes = rand.Intn(6) + 1
+
+	var eyes = rand.Intn(5) + 1
 	var when = time.Now()
 
-	eyesFile, err := os.Create("eyes.txt")
-	if err != nil {
-		fmt.Println("Error creating eyes.txt:", err)
-		return
-	}
-	defer eyesFile.Close()
+	// TODO: use fmt.Fprintln instead!
+	fmt.Fprintln(os.Stdout, "the dice shows", eyes, "eyes")
 
-	logFile, err := os.OpenFile("dice.log", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
-	if err != nil {
-		fmt.Println("Error opening dice.log:", err)
-		return
-	}
-	defer logFile.Close()
+	// TODO: use fmt.Fprintln instead!
+	fmt.Fprintln(os.Stderr, "the dice was rolled at", when)
 
-	fmt.Fprintln(eyesFile, "the dice shows", eyes, "eyes")
-	fmt.Fprintln(logFile, "the dice was rolled at", when)
+	// TODO: how to write the output into eyes.txt and dice.log?
+	// go run ex3/main.go TODO
 
-	fmt.Println("Results written to eyes.txt and dice.log")
+	// go run main.go > eyes.txt 2> dice.log
+
 }
