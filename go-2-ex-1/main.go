@@ -33,7 +33,7 @@ func main() {
 		},
 		
 		NumberOfSiblings: 1,  
-		ZodiacSign:       '\u264F', 
+		ZodiacSign:'\u264F', 
 	}
 	fmt.Println(me)
 
