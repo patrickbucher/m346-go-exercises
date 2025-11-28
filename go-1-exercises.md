@@ -16,6 +16,8 @@ Falls du die Aufgabe nicht lösen kannst, notierst du dir die Umrechnungen auf e
 
 ## Standardausgabe, Standardfehler
 
+**Hinweis**: Dieses Programm muss mit der Git Bash oder einer vergleichbaren Unix-Shell ausgeführt werden (`csh`, `ksh`, `zsh`), nicht mit der PowerShell!
+
 `go-1-ex-3/main.go`: Das Programm würfelt eine zufällige Zahl (zwischen 1 und 6) und zeigt diese an. Weiter zeigt das Programm an, wann die Zahl gewürfelt worden ist. Anstelle von `fmt.Println` verwendest du die Funktion `fmt.Fprintln` um die beiden Informationen auszugeben.
 
 Als erstes Argument musst du hierzu `os.Stdout` oder `os.Stderr` verwenden.  Für welche Art der Information (erwürfelte Augen oder Zeitpunkt des Würfelns) ist welche Ausgabe (`os.Stdout`/`os.Stderr`) besser geeignet?
